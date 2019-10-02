@@ -5,7 +5,6 @@ import (
 	"log"
 
 	"github.com/BurntSushi/toml"
-	"github.com/Sterks/http-rest-api/configs/apiserver"
 	"github.com/Sterks/http-rest-api/internal/app/apiserver"
 )
 
@@ -19,7 +18,6 @@ func init() {
 
 func main() {
 	flag.Parse()
-
 	config := apiserver.NewConfig()
 	_, err := toml.DecodeFile(configPath, config)
 	if err != nil {
